@@ -12,7 +12,7 @@ RECV_BUFFER = 4096
 PORT = 9009
 
 def chat_server():
-    my_sctp_socket = sctpsocket_tcp(socket.AF_INET, socket.SOCK_STREAM)
+    my_sctp_socket = sctpsocket_tcp(socket.AF_INET)
     # server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     my_sctp_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     my_sctp_socket.bind((HOST, PORT))

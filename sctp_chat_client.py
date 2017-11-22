@@ -16,7 +16,7 @@ def chat_client():
     host = sys.argv[1]
     port = int(sys.argv[2])
 
-    s = sctpsocket_tcp(socket.AF_INET, socket.SOCK_STREAM)
+    s = sctpsocket_tcp(socket.AF_INET)
     s.settimeout(2)
 
     # connect to remote host
